@@ -4,9 +4,19 @@
 
 $(function() {
 
-    /* $("a#prospect").on('click', function(){
-           
-
+    $("a#prospect").on('click', function(){
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "prospect.html");
+        
+        let el = document.getElementById("content");
+        
+        xhr.onload = function () { 
+        if (xhr.status === 200){
+            
+            d.innerHTML = xhr.responseText;}
+        
+        };
+        xhr.send();
     });
 
     $("a#convert").on('click', function(){
@@ -15,7 +25,7 @@ $(function() {
     
     $("a#retain").on('click', function(){
         console.log("R wasss clicked ")
-    }); */
+    });
 
 });
 
@@ -23,15 +33,4 @@ let d = document.getElementById("content");
 document.getElementById("content").style.display = "block";
 
 
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "prospect.html");
 
-let el = document.getElementById("content");
-
-xhr.onload = function () { 
-if (xhr.status === 200){
-    
-    d.innerHTML = xhr.responseText;}
-
-};
-xhr.send();
