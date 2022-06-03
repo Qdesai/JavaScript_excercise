@@ -4,7 +4,7 @@
 
 $(function() {
 
-    $("a#prospect").on('click', function(){
+    /* $("a#prospect").on('click', function(){
            
 
     });
@@ -15,7 +15,7 @@ $(function() {
     
     $("a#retain").on('click', function(){
         console.log("R wasss clicked ")
-    });
+    }); */
 
 });
 
