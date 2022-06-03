@@ -21,11 +21,13 @@ $(function() {
 
  
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "../prospect.html");
+xhr.open("GET", "prospect.html");
 
 xhr.onload = function () { 
 if (xhr.status === 200){
-    console.log('donee');
+    let el = document.getElementById("#content");
+    el.innerHTML = xhr.responseText;
 }
+
 };
 xhr.send();
