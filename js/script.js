@@ -6,16 +6,15 @@ $(function() {
 
     $("a#prospect").on('click', function(){
             
-var xhr = new XMLHttpRequest();
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "prospect.html");
 
-xhr.open("GET", "../prospect.html");
-
-xhr.onload = function(){ 
-if (xhr.status === 200){
-    console.log('donee');
-}
-};
-xhr.send();
+            xhr.onload = function () { 
+            if (xhr.status === 200){
+                console.log('donee');
+            }
+            };
+            xhr.send();
 
     });
 
