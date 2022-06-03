@@ -2,16 +2,10 @@
 // Mohammed Qaasim Desai
 
 
-$().ready (function()  {
+$(function() {
 
     $("a#prospect").on('click', function(){
-        xhr.open("GET", "prospect.html");
-        xhr.onload = function () { 
-            if (xhr.status === 200){
-                
-                d.innerHTML = xhr.responseText;}
-            
-            };
+        
     });
 
     $("a#convert").on('click', function(){
@@ -30,6 +24,11 @@ document.getElementById("content").style.display = "block";
 var xhr = new XMLHttpRequest();        
 let el = document.getElementById("content");
 
-
-
+xhr.open("GET", "prospect.html");
+        xhr.onload = function () { 
+            if (xhr.status === 200){
+                
+                d.innerHTML = xhr.responseText;}
+            
+            };
 xhr.send();
