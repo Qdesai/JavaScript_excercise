@@ -1,14 +1,8 @@
 // WEB303 Assignment 2
 // Mohammed Qaasim Desai
-let d = document.getElementById("content");
-document.getElementById("content").style.display = "block";
 
-var xhr = new XMLHttpRequest();        
-let el = document.getElementById("content");
 
-xhr.send();
-
-$(function() {
+$().ready (function()  {
 
     $("a#prospect").on('click', function(){
         xhr.open("GET", "prospect.html");
@@ -30,4 +24,12 @@ $(function() {
 
 });
 
+let d = document.getElementById("content");
+document.getElementById("content").style.display = "block";
 
+var xhr = new XMLHttpRequest();        
+let el = document.getElementById("content");
+
+
+
+xhr.send();
