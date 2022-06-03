@@ -1,11 +1,9 @@
 // WEB303 Assignment 2
 // Mohammed Qaasim Desai
 
-
 $(function() {
 
     $("a#prospect").on('click', function(){
-        var xhr = new XMLHttpRequest();
         xhr.open("GET", "prospect.html");
         
         let el = document.getElementById("content");
@@ -32,5 +30,6 @@ $(function() {
 let d = document.getElementById("content");
 document.getElementById("content").style.display = "block";
 
-
+var xhr = new XMLHttpRequest();
+        
 
