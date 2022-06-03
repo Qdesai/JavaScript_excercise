@@ -19,15 +19,19 @@ $(function() {
 
 });
 
- 
+let d = document.getElementById("content");
+document.getElementById("content").style.display = "block";
+
+
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "prospect.html");
 
+let el = document.getElementById("content");
+
 xhr.onload = function () { 
 if (xhr.status === 200){
-    let el = document.getElementById("#content");
-    el.innerHTML = xhr.responseText;
-}
+    
+    d.innerHTML = xhr.responseText;}
 
 };
 xhr.send();
