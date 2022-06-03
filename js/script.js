@@ -4,17 +4,7 @@
 $(function() {
 
     $("a#prospect").on('click', function(){
-        xhr.open("GET", "prospect.html");
-        
-        let el = document.getElementById("content");
-        
-        xhr.onload = function () { 
-        if (xhr.status === 200){
-            
-            d.innerHTML = xhr.responseText;}
-        
-        };
-        xhr.send();
+       
     });
 
     $("a#convert").on('click', function(){
@@ -32,4 +22,14 @@ document.getElementById("content").style.display = "block";
 
 var xhr = new XMLHttpRequest();
         
+xhr.open("GET", "prospect.html");
+        
+let el = document.getElementById("content");
 
+xhr.onload = function () { 
+if (xhr.status === 200){
+    
+    d.innerHTML = xhr.responseText;}
+
+};
+xhr.send();
