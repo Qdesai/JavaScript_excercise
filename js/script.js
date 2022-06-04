@@ -5,7 +5,8 @@
 $(function() {
 
     $("a#prospect").on('click', function(){
-        pros(prospects.html);
+        page = "prospects.html";
+        pros(page);
     });
 
     $("a#convert").on('click', function(){
