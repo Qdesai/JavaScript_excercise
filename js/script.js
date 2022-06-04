@@ -40,5 +40,5 @@ document.getElementById("content").style.display = "block";
 
         }
 
-
+        let h2 = document.querySelector('h2');
         $("h2").animate({top: '250px'});
