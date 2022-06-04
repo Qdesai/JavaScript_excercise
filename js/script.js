@@ -15,7 +15,8 @@ $(function() {
     });
     
     $("a#retain").on('click', function(){
-        console.log("R wasss clicked ")
+        page = "retain.html";
+        pros(page);
     });
 
 });
