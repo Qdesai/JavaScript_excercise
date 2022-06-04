@@ -20,9 +20,8 @@ $(function() {
         pros(page);
     });
 
-    $("h2").on('click', function(){
-        console.log("its donee");
-                 $("h2").animate({ fontSize: "10em"});
+    $("section > a").on('click', function(){
+            $("div").animate({ fontSize: "2em"});
     });
 });
 
