@@ -10,7 +10,8 @@ $(function() {
     });
 
     $("a#convert").on('click', function(){
-        console.log("C wasss clickked ");
+        page = "convert.html";
+        pros(page);
     });
     
     $("a#retain").on('click', function(){
