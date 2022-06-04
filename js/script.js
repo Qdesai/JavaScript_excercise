@@ -42,4 +42,4 @@ document.getElementById("content").style.display = "block";
 
         }
 
-        $("h2").animate({ fontSize: "1em"});
+        $("h2").animate({ fontSize: "3em"});
