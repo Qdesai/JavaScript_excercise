@@ -41,5 +41,4 @@ document.getElementById("content").style.display = "block";
             xhr.send();
 
         }
-
         $("h2").animate({ fontSize: "3em"});
