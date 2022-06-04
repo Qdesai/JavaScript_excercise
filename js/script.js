@@ -21,7 +21,8 @@ $(function() {
     });
 
     $("section > a").on('click', function(){
-            $("div").animate({ top: "50px"
+            $("div").animate({ fontSize: "1em",
+                                
                             });
     });
 });
