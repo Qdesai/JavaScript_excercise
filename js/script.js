@@ -5,7 +5,7 @@
 $(function() {
 
     $("a#prospect").on('click', function(){
-        page = "prospects.html";
+        page = "prospect.html";
         pros(page);
     });
 
