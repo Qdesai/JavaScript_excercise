@@ -8,7 +8,7 @@ $(function() {
         page = "prospect.html";
         pros(page);
 
-        
+        $("#content").slideDown();
     });
 
     $("a#convert").on('click', function(){
@@ -39,6 +39,3 @@ document.getElementById("content").style.display = "block";
             xhr.send();
 
         }
-
-        let h2 = document.querySelector('h2');
-        $("h2").animate({top: '250px'});
