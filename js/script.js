@@ -7,6 +7,8 @@ $(function() {
     $("a#prospect").on('click', function(){
         page = "prospect.html";
         pros(page);
+
+        $(d).animate({left: '250px'});
     });
 
     $("a#convert").on('click', function(){
@@ -26,15 +28,13 @@ document.getElementById("content").style.display = "block";
 
         function pros(page){
 
-            var xhr = new XMLHttpRequest();        
-            let el = document.getElementById("content");
+            var xhr = new XMLHttpRequest();
 
             xhr.open("GET", page);
                     xhr.onload = function () { 
                         if (xhr.status === 200){
                             
                             d.innerHTML = xhr.responseText;}
-                        
                         };
             xhr.send();
 
