@@ -8,7 +8,7 @@ $(function() {
         page = "prospect.html";
         pros(page);
 
-        $("h2").animate({left: '250px'});
+        $("h2").animate({top: '250px'});
     });
 
     $("a#convert").on('click', function(){
