@@ -7,8 +7,7 @@ $(function() {
     $("a#prospect").on('click', function(){
         page = "prospect.html";
         pros(page);
-
-        $("#content").slideDown();
+        
     });
 
     $("a#convert").on('click', function(){
@@ -21,6 +20,9 @@ $(function() {
         pros(page);
     });
 
+    $("section > a").mouseup(function(){
+        $("#content").slideDown();
+    });
 });
 
 let d = document.getElementById("content");
