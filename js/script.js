@@ -21,9 +21,7 @@ $(function() {
     });
 
     $("section > a").on('click', function(){
-            $("div").animate({ fontSize: "1em",
-                                top: "50px", 
-                                left: "25px"
+            $("div").animate({ top: "50px"
                             });
     });
 });
