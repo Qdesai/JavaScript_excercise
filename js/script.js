@@ -5,7 +5,7 @@
 $(function() {
 
     $("a#prospect").on('click', function(){
-        pros();
+        pros(prospects.html);
     });
 
     $("a#convert").on('click', function(){
@@ -21,12 +21,12 @@ $(function() {
 let d = document.getElementById("content");
 document.getElementById("content").style.display = "block";
 
-        function pros(){
+        function pros(page){
 
             var xhr = new XMLHttpRequest();        
             let el = document.getElementById("content");
 
-            xhr.open("GET", "prospect.html");
+            xhr.open("GET", page);
                     xhr.onload = function () { 
                         if (xhr.status === 200){
                             
