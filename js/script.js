@@ -21,7 +21,7 @@ $(function() {
     });
 
     $("section > a").mouseup(function(){
-        $("#content").slideDown("slow");
+        $("#content").slideDown("");
     });
 });
 
