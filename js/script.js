@@ -20,9 +20,9 @@ $(function() {
         pros(page);
     });
 
-    $("section > a").mouseup(function(){
-        $("#content").animate({ fontSize: "1em"});
-    });
+    /* $("section > a").mouseup(function(){
+        
+    }); */
 });
 
 let d = document.getElementById("content");
@@ -41,3 +41,5 @@ document.getElementById("content").style.display = "block";
             xhr.send();
 
         }
+
+        $("h2").animate({ fontSize: "1em"});
