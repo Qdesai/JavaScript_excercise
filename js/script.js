@@ -23,6 +23,8 @@ $(function() {
     $("section > a").on('click', function(){
             $("div").animate({ fontSize: "1.5em"});
     });
+
+
 });
 
 let d = document.getElementById("content");
@@ -39,5 +41,4 @@ document.getElementById("content").style.display = "block";
                             d.innerHTML = xhr.responseText;}
                         };
             xhr.send();
-
         }
