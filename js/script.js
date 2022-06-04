@@ -20,9 +20,9 @@ $(function() {
         pros(page);
     });
 
-    /* $("section > a").mouseup(function(){
-        
-    }); */
+    $("h2").on("click", function(){
+                $("h2").animate({ fontSize: "10em"});
+    });
 });
 
 let d = document.getElementById("content");
@@ -41,4 +41,3 @@ document.getElementById("content").style.display = "block";
             xhr.send();
 
         }
-        $("h2").animate({ fontSize: "3em"});
