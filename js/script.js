@@ -21,7 +21,7 @@ $(function() {
     });
 
     $("section > a").mouseup(function(){
-        $("#content").animate({fontSize: "1em"});
+        $("#content").animate({ fontSize: "1em"});
     });
 });
 
