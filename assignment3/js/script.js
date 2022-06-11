@@ -2,12 +2,6 @@
 // Mohammed qaasim desai 
 
 $(function() {
-
-    getData();
-});
-
-
-function getData(){
     $.getJSON("data/glitchTeam.json"), function(JSONDataFromFile/* ,satatusText,jqXHRObject */){
 
         console.log(JSONDataFromFile);
@@ -15,4 +9,10 @@ function getData(){
             
         }); */
     }
+
+});
+
+
+function getData(){
+    
 };
