@@ -4,7 +4,7 @@
 $(function() {
 
     $("a").on('click', function(){
-                            $.getJSON("data/glitchTeam.json"), function(JSONDataFromFile, satatusText, jqXHRObject ){
+                            $.getJSON("data/glitchTeam.json", function(JSONDataFromFile, satatusText, jqXHRObject ){
                                 console.log('hiiiii');
                                 console.log(JSONDataFromFile);
                                 console.log(satatusText);
@@ -13,7 +13,7 @@ $(function() {
                                 /* $.each(JSONDataFromFile, function(i, val){
                                     
                                 }); */
-                            }
+                            });
     });
     
 
