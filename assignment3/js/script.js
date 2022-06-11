@@ -4,17 +4,18 @@
 $(function() {
 
     $("a").on('click', function(){
+
                             $.getJSON("data/glitchTeam.json", function(JSONDataFromFile, satatusText, jqXHRObject ){
                                 console.log('hiiiii');
                                 console.log(JSONDataFromFile);
                                 console.log(satatusText);
                                 console.log(jqXHRObject);
                                 
-                                /* $.each(JSONDataFromFile, function(i, val){
-                                    
-                                }); */
+                                $.each(JSONDataFromFile, function(i, val){
+                                console.log(JSONDataFromFile);
+                                console.log(satatusText);
+                                console.log(jqXHRObject);    
+                                });
                             });
     });
-    
-
 });
