@@ -12,9 +12,9 @@ $(function() {
                                 console.log(jqXHRObject);
                                 
                                 $.each(JSONDataFromFile, function(i, val){
-                                console.log(JSONDataFromFile);
-                                console.log(satatusText);
-                                console.log(jqXHRObject);    
+                                console.log(val.fullname);
+                                console.log(val.position);
+                                   
                                 });
                             });
     });
