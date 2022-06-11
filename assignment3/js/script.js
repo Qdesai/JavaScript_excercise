@@ -12,8 +12,7 @@ $(function() {
                                 console.log(jqXHRObject);
                                 
                                 $.each(JSONDataFromFile, function(i, val){
-                                console.log(val.fullname);
-                                console.log(val.position);
+                                        $("content-wrapper").html(`<h1>${val.fullname}</h1>`)
                                    
                                 });
                             });
