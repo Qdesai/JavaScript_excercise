@@ -3,8 +3,6 @@
 
 $(function() {
 
-    $("a").on('click', function(){
-
                             $.getJSON("data/glitchTeam.json", function(JSONDataFromFile, satatusText, jqXHRObject ){
                                 console.log('hiiiii');
                                 console.log(JSONDataFromFile);
@@ -12,9 +10,10 @@ $(function() {
                                 console.log(jqXHRObject);
                                 
                                 $.each(JSONDataFromFile, function(i, val){
-                                        console.log('this was executed');
+                                        $("content-wrapper").html(`<h1>${val.fullname}</h1>`);
+                                        $("content-wrapper").html(`<h1>${val.positon}</h1>`);
                                    
                                 });
                             });
-    });
+    
 });
