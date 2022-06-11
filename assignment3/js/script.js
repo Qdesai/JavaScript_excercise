@@ -3,8 +3,11 @@
 
 $(function() {
 
-    $.getJSON("data/glitchTeam.json"), function(JSONDataFromFile, satatusText, jqXHRObject ){
+    $("a").on('click', function(){
         console.log('hiiiii');
+    });
+    $.getJSON("data/glitchTeam.json"), function(JSONDataFromFile, satatusText, jqXHRObject ){
+        
         console.log(JSONDataFromFile);
         console.log(satatusText);
         console.log(jqXHRObject);
