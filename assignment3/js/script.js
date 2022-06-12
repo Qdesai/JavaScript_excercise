@@ -3,8 +3,8 @@
 
 $(function() {
 
-            displayTeam();
-                                        
+    ajaxDisplayTeam();
+
         
 });
 
@@ -21,5 +21,14 @@ function displayTeam(){
             let shortB = $(`<p>${val.shortbio}</p><br>`);
                 $("#glitch-team").append(loc).append(pos).append(shortB);
         });
+    });
+};
+
+function ajaxDisplayTeam(){
+    $.ajax({
+    }).before(function (){
+        console.log("Loading Teams....");
+    }).get("glitchTeam.json", funciton(JSONDataFromFile){
+
     });
 }
