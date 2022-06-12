@@ -11,9 +11,9 @@ $(function() {
                                 console.log(jqXHRObject); */
                                 
                                 $.each(JSONDataFromFile.members, function(i, val){
-                                        $("#glitch-team").html(`<h4>${val.fullname}</h4>`);
-                                        $("#glitch-team").html(`<h6>${val.positon}</h6>`);
-                                        $("#glitch-team").html(`<p>${val.shortbio}</p>`);
+                                        $("#glitch-team").append(`<h4>${val.fullname}</h4>`);
+                                        $("#glitch-team").append(`<h6>${val.positon}</h6>`);
+                                        $("#glitch-team").append(`<p>${val.shortbio}</p>`);
                                     console.log(val.fullname);
                                     console.log(val.position);
                                     console.log(val.shortbio);
