@@ -14,7 +14,6 @@ $(function() {
 function displayTeam(){
     $.getJSON("data/glitchTeam.json", function(JSONDataFromFile, satatusText, jqXHRObject ){
         console.log(JSONDataFromFile);
-
         
         $.each(JSONDataFromFile.members, function(i, val){
             let loc = $(`<h4>${val.fullname}</h4>`);
