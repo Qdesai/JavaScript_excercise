@@ -3,7 +3,7 @@
 
 $(function() {
 
-    $("a").on('click', function(){
+    
 
                             $.getJSON("data/glitchTeam.json", function(JSONDataFromFile, satatusText, jqXHRObject ){
                                 console.log(JSONDataFromFile);
@@ -22,5 +22,5 @@ $(function() {
                                     console.log(val.shortbio);
                                 });
                             });
-        });
+        
 });
