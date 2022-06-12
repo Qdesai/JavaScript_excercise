@@ -3,10 +3,8 @@
 
 $(function() {
 
-
-    
-    
-        ajaxDisplayTeam();
+        displayTeam();
+        //ajaxDisplayTeam();
             
 });
 
