@@ -24,7 +24,12 @@ function displayTeam(){
 
 function ajaxDisplayTeam(){
 
-    $.get("data/glitchTeam.json").before("<h1>Loading Team...").done(function(){
+    $.ajax({
+        url: "glitchTeam.json",
+        beforeSend: function() {
+            <h1>Loading Teams...</h1>
+          }
+      }).done(function(){
         console.log('doneee');
 
 
