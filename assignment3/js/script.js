@@ -26,8 +26,8 @@ function ajaxDisplayTeam(){
 
     $.ajax({
         url: "glitchTeam.json",
-        beforeSend: function() {
-            <h1>Loading Teams...</h1>
+        beforeSend: function( xhr ) {
+            xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
           }
       }).done(function(){
         console.log('doneee');
