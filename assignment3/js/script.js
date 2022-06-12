@@ -15,6 +15,7 @@ $(function() {
                                                                 <h6>${val.positon}</h6>
                                                                 <p>${val.shortbio}</p>
                                         `);
+                                        
                                     console.log(val.fullname);
                                     console.log(val.position);
                                     console.log(val.shortbio);
