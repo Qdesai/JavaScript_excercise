@@ -39,4 +39,3 @@ function ajaxDisplayTeam(){
 
 /* .before($("#glitch-team").html( "<h1> Loading Teams...</h1>"),
     console.log('donee') ); */
-    }
