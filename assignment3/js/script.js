@@ -27,8 +27,8 @@ function ajaxDisplayTeam(){
     $.ajax({
         url: "glitchTeam.json",
         beforeSend: function( xhr ) {
-            <h1>Loading Team...</h1>
-          }
+
+        }
       }).done(function(){
 
                              $.get("data/glitchTeam.json", function(JSONDataFromFile){
