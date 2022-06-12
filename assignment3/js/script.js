@@ -6,7 +6,6 @@ $(function() {
     $("a").on('click', function(){
 
                             $.getJSON("data/glitchTeam.json", function(JSONDataFromFile, satatusText, jqXHRObject ){
-                                console.log('hiiiii');
                                 console.log(JSONDataFromFile);
                                 /* console.log(satatusText);
                                 console.log(jqXHRObject); */
@@ -15,9 +14,8 @@ $(function() {
                                         $("content-wrapper").html(`<h1>${val.fullname}</h1>`);
                                         $("content-wrapper").html(`<h1>${val.positon}</h1>`);
                                     console.log(val.fullname);
-                                    console.log(val.positon);
-                                    
-
+                                    console.log(val.position);
+                                    console.log(val.shortbio);
                                 });
                             });
         });
