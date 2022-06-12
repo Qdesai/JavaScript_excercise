@@ -3,7 +3,7 @@
 
 $(function() {
 
-    $("a").on('click', funciton(){
+    $("a").on('click', function(){
         ajaxDisplayTeam();
     })
 
