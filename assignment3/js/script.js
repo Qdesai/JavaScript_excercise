@@ -28,5 +28,6 @@ function ajaxDisplayTeam(){
     $.ajax({
     }).get("glitchTeam.json", function(JSONDataFromFile){
 
-    }).before($("#glitch-team").html( "<h1> Loading Teams...</h1>") );
-    };
+    }).before($("#glitch-team").html( "<h1> Loading Teams...</h1>"),
+    console.log('donee') );
+    }
