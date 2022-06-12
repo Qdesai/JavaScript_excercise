@@ -25,9 +25,8 @@ function displayTeam(){
 };
 
 function ajaxDisplayTeam(){
-    console.log('doneee');
 
-    $.ajax("data/glitchTeam.json").done(function(){
+    $.get("data/glitchTeam.json").done(function(){
         console.log('doneee');
 
 
