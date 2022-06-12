@@ -30,14 +30,14 @@ function ajaxDisplayTeam(){
         console.log('doneee');
 
 
-                           /*  $.ajax("glitchTeam.json", function(JSONDataFromFile){
+                             $.ajax("glitchTeam.json", function(JSONDataFromFile){
                                 $.each(JSONDataFromFile.members, function(i, val){
                                     let loc = $(`<h4>${val.fullname}</h4>`);
                                     let pos = $(`<h6>${val.position}</h6>`);
                                     let shortB = $(`<p>${val.shortbio}</p><br>`);
                                         $("#glitch-team").append(loc).append(pos).append(shortB);
                                 });
-                            })*/
+                            });
                         }); 
 }
 
