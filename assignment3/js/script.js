@@ -26,8 +26,9 @@ function displayTeam(){
 
 function ajaxDisplayTeam(){
 
-    $.get("data/glitchTeam.json").done(function(){
+    $.ajax("").done(function(){
         console.log('doneee');
+
 
                            /*  $.get("glitchTeam.json", function(JSONDataFromFile){
                                 $.each(JSONDataFromFile.members, function(i, val){
