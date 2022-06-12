@@ -31,8 +31,7 @@ function ajaxDisplayTeam(){
           }
       }).done(function(){
 
-                             $.get("glitchTeam.json", function(JSONDataFromFile){
-                                console.log(JSONDataFromFile);
+                             $.get("data/glitchTeam.json", function(JSONDataFromFile){
                                 $.each(JSONDataFromFile.members, function(i, val){
                                     console.log(val.fullname);
                                     let loc = $(`<h4>${val.fullname}</h4>`);
