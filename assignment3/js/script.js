@@ -27,7 +27,7 @@ function ajaxDisplayTeam(){
     $.ajax({
         url: "glitchTeam.json",
         beforeSend: function( xhr ) {
-            xhr.responseText( "Loading Teams..." );
+            
           }
       }).done(function(){
         console.log('doneee');
