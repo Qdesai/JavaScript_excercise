@@ -16,7 +16,7 @@ $(function() {
                                         $("content-wrapper").html(`<h1>${val.positon}</h1>`);
                                     console.log(val.fullname);
                                     console.log(val.positon);
-                                    console.log(val.shortbio);
+                                    
 
                                 });
                             });
