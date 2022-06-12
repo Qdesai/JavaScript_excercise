@@ -12,7 +12,7 @@ $(function() {
                                 
                                 $.each(JSONDataFromFile.members, function(i, val){
                                         $("content-wrapper").html(`<h1>${val.fullname}</h1>`);
-                                        $("content-wrapper").html(`<h1>${val.positon}</h1>`);
+                                        $("#glitch-team").html(`<h1>${val.positon}</h1>`);
                                     console.log(val.fullname);
                                     console.log(val.position);
                                     console.log(val.shortbio);
