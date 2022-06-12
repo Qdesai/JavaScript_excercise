@@ -37,8 +37,8 @@ function ajaxDisplayTeam(){
                                     let shortB = $(`<p>${val.shortbio}</p><br>`);
                                         $("#glitch-team").append(loc).append(pos).append(shortB);
                                 });
-                            })
-                        }); */
+                            })*/
+                        }); 
 }
 
 /* .before($("#glitch-team").html( "<h1> Loading Teams...</h1>"),
