@@ -5,9 +5,9 @@ $(function() {
 
 
     
-    $("a").on('click', function(){
+    
         ajaxDisplayTeam();
-    })        
+            
 });
 
 
