@@ -27,11 +27,10 @@ function ajaxDisplayTeam(){
     $.ajax({
         url: "glitchTeam.json",
         beforeSend: function( xhr ) {
-            xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+            xhr.responseText( "Loading Teams..." );
           }
       }).done(function(){
         console.log('doneee');
-
 
                              $.getJSON("glitchTeam.json", function(JSONDataFromFile){
                                 $.each(JSONDataFromFile.members, function(i, val){
