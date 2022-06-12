@@ -26,7 +26,7 @@ function displayTeam(){
 
 function ajaxDisplayTeam(){
 
-    $.ajax("data/glitchTeam.json", function(JSONDataFromFile){
+    $.ajax("data/glitchTeam.json").done(function(){
         console.log('doneee');
 
 
@@ -38,7 +38,7 @@ function ajaxDisplayTeam(){
                                         $("#glitch-team").append(loc).append(pos).append(shortB);
                                 });
                             })
-    });
+                        });
 }
 
 /* .before($("#glitch-team").html( "<h1> Loading Teams...</h1>"),
