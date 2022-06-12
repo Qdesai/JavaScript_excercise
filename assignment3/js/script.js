@@ -33,7 +33,7 @@ function ajaxDisplayTeam(){
         console.log('doneee');
 
 
-                             $.geJSONt("glitchTeam.json", function(JSONDataFromFile){
+                             $.getJSON("glitchTeam.json", function(JSONDataFromFile){
                                 $.each(JSONDataFromFile.members, function(i, val){
                                     console.log(val.fullname);
                                     let loc = $(`<h4>${val.fullname}</h4>`);
