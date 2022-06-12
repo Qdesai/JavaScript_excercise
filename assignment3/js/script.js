@@ -3,8 +3,8 @@
 
 $(function() {
 
-        displayTeam();
-        //ajaxDisplayTeam();
+        //displayTeam();
+        ajaxDisplayTeam();
             
 });
 
@@ -24,11 +24,11 @@ function displayTeam(){
 
 function ajaxDisplayTeam(){
 
-    $.get("data/glitchTeam.json").done(function(){
+    $.get("data/glitchTeam.json").before("<h1>Loading Team...").done(function(){
         console.log('doneee');
 
 
-                             $.ajax("glitchTeam.json", function(JSONDataFromFile){
+                             $.get("glitchTeam.json", function(JSONDataFromFile){
                                 $.each(JSONDataFromFile.members, function(i, val){
                                     console.log(val.fullname);
                                     let loc = $(`<h4>${val.fullname}</h4>`);
