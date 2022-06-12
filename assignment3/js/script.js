@@ -11,10 +11,11 @@ $(function() {
                                 console.log(jqXHRObject); */
                                 
                                 $.each(JSONDataFromFile.members, function(i, val){
-                                        $("#glitch-team").append(`<h4>${val.fullname}</h4>
-                                                                <h6>${val.positon}</h6>
-                                                                <p>${val.shortbio}</p>
-                                        `);
+                                    let loc = $(`<h4>${val.fullname}</h4>`);
+                                    let pos = $(`<h6>${val.positon}</h6>`);
+                                    let shortB = $(`<p>${val.shortbio}</p>`);
+
+                                        $("#glitch-team").append(loc).append(pos).append(shortB);
 
                                     console.log(val.fullname);
                                     console.log(val.position);
