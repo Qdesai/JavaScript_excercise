@@ -25,9 +25,10 @@ function displayTeam(){
 };
 
 function ajaxDisplayTeam(){
-    console.log('doneeeee');
 
-    $.ajax(function(){
+    $.ajax("glitchTeam.json", function(){
+        console.log('doneeeee');
+
                             $.get("glitchTeam.json", function(JSONDataFromFile){
                                 $.each(JSONDataFromFile.members, function(i, val){
                                     let loc = $(`<h4>${val.fullname}</h4>`);
