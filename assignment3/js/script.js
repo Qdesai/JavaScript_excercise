@@ -32,6 +32,7 @@ function ajaxDisplayTeam(){
 
                              $.ajax("glitchTeam.json", function(JSONDataFromFile){
                                 $.each(JSONDataFromFile.members, function(i, val){
+                                    console.log(val.fullname);
                                     let loc = $(`<h4>${val.fullname}</h4>`);
                                     let pos = $(`<h6>${val.position}</h6>`);
                                     let shortB = $(`<p>${val.shortbio}</p><br>`);
