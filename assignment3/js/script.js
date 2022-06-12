@@ -3,7 +3,9 @@
 
 $(function() {
 
-    ajaxDisplayTeam();
+    $("a").on('click', funciton(){
+        ajaxDisplayTeam();
+    })
 
         
 });
