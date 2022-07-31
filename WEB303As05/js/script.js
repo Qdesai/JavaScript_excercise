@@ -58,6 +58,15 @@ var Characters = [
             $('body').append($tableBody);
 
  */
+            function addHeading(){
+                var $row = $('<tr></tr>');
+                $row.append( $('<th></th>').text('FullName'));
+                $row.append( $('<th></th>').text('Description'));
+                $row.append( $('<th></th>').text('Age'));
+                $row.append( $('<th></th>').text('DOB'));
+                var $temp = $('tbody').append($row);
+                $('body').append($temp);
+            }
 
             var $rows = [];
             function makeRows() {
@@ -74,6 +83,7 @@ var Characters = [
                 });
                 }
 
+
                 function appendRows() {
                     var $tbody = $('<tbody></tbody>'); // Create <tbody> element
                     $rows.forEach(function($row) { // Each obj in rows array
@@ -81,9 +91,15 @@ var Characters = [
                     });
                     $('body').append($tbody); // Add rows to the table
                     }
-
+                    
+                   
+                addHeading();
                 makeRows();
                 appendRows();
+              
+                
+
+                
                 
                 
 
