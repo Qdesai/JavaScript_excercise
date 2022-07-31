@@ -4,35 +4,35 @@
 
 var Characters = [
         {
-        FullName: "Chris Evans",
+        FullName: "chris evans",
         Description: "Chris Evans who is playing Captain America (America's first-ever Super Soldier) in the Marvel movies. his acting is very impressing and i cound'nt think of someone who could do this role better",
         Age: 41,
         DOB: new Date(1981, 06, 13)
         },
 
         {
-            FullName: "Robert Downey Jr",
+            FullName: "robert downey jr",
             Description: "Robert Downey Jr who is playing Tony Stark (Iron Man) in the Marvel movies. his acting is very impressing and I cound'nt think of someone who could do this role better than him",
             Age: 57,
             DOB: new Date(1965, 04, 04)
         },
     
         {
-            FullName: "Chris Hemsworth",
+            FullName: "chris hemsworth",
             Description: "Chris Hemsworth who is playing Thor (The god of lighting) in the Marvel movies. his acting is very impressing and I cound'nt think of someone who could do this role better than him",
             Age: 38,
             DOB: new Date(1983, 08, 11)
         },
 
         {
-            FullName: "Tom Holland",
+            FullName: "tom holland",
             Description: "Tom Holland who is playing SpiderMan (A kid initially recruited by Tony Stark to help stop Captain America but he enters the avengers) in the Marvel movies. his acting is very impressing and I cound'nt think of someone who could do this role better than him",
             Age: 26,
             DOB: new Date(1996, 06, 01)
         },
 
         {
-            FullName: "Scarlett Johansson",
+            FullName: "scarlett johansson",
             Description: "Scarlett Johansson who is playing Natasha Romanoff (Black Widow) in the Marvel movies. her acting is very impressing and I cound'nt think of someone who could do this role better than her",
             Age: 37,
             DOB: new Date(1984, 11, 22)
@@ -91,8 +91,8 @@ var Characters = [
                     let $str = $("#Search").val();
                     console.log($str);
                     $rows.forEach(function($row){
-                        if($str === $row.chara.FullName){
-                            $($row.$element).css("background-color","red"); 
+                        if($row.chara.FullName.includes($str) && $str != ""){
+                            $($row.$element).css("background-color","#EE4B2B"); 
                         }
                         else{
                             $($row.$element).css("background-color","white");
