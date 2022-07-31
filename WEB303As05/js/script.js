@@ -92,7 +92,10 @@ var Characters = [
                     console.log($str);
                     $rows.forEach(function($row){
                         if($str === $row.chara.FullName){
-                            $($element.$row).css("background-color","red"); 
+                            $($row.$element).css("background-color","red"); 
+                        }
+                        else{
+                            $($row.$element).css("background-color","white");
                         }
                     })
                     
