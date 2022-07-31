@@ -84,5 +84,18 @@ var Characters = [
 
                 makeRows();
                 appendRows();
+                
+                
 
+                $("#Search").on("keyup", function(){
+                    let $str = $("#Search").val();
+                    console.log($str);
+                    $rows.forEach(function($row){
+                        if($str === $row.chara.FullName){
+                            $($element.$row).css("background-color","red"); 
+                        }
+                    })
+                    
+                    
+                });
         });
