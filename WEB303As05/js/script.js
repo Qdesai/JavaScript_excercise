@@ -39,29 +39,21 @@ var Characters = [
         }
     ]
 
-    $(function() {
+        $(function() {
 
-   /*  var Results = [];
-
-        Characters.forEach(function(chara){
-            Results.push(chara);
-        }); */
-        
-       
-        var $tableBody = $('<tbody></tbody>');
-
-        
-
-        for (var i = 0; i < Characters.length; i++) {
+            var $tableBody = $('<tbody></tbody>');
             
-            //console.log(Characters[i].FullName);
-            var num = Characters[i];
-            var $row = $('<tr></tr>'); // Create row for them
-            $row.append($('<td></td>').text(num.FullName)); // Add name
-            $row.append($('<td></td>').text(num.Description)); // Add rate
-            $tableBody.append( $row );
-        }
-        
- 
+            for (var i = 0; i < Characters.length; i++){
+                console.log(Characters[i].FullName);
+                var $row = $('<tr></tr>');
+                $row.append($('<td></td>').text(Characters[i].FullName));
+                $row.append($('<td></td>').text(Characters[i].Description));
+                $row.append($('<td></td>').text(Characters[i].Age));
+                $row.append($('<td></td>').text(Characters[i].DOB));
+                $tableBody.append($row);
+            }
+            $('body').append($tableBody);
 
+
+            
     });
