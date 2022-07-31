@@ -34,17 +34,20 @@ var Characters = [
         {
             FullName: "Scarlett Johansson",
             Description: "Scarlett Johansson who is playing Natasha Romanoff (Black Widow) in the Marvel movies. her acting is very impressing and I cound'nt think of someone who could do this role better than her",
-            Age: 26,
-            DOB: new Date(1996, 06, 01)
+            Age: 37,
+            DOB: new Date(1984, 11, 22)
         }
     ]
 
+
+
+
         $(function() {
 
-            var $tableBody = $('<tbody></tbody>');
+            /* var $tableBody = $('<tbody></tbody>');
             
             for (var i = 0; i < Characters.length; i++){
-                console.log(Characters[i].FullName);
+
                 var $row = $('<tr></tr>');
                 $row.append($('<td></td>').text(Characters[i].FullName));
                 $row.append($('<td></td>').text(Characters[i].Description));
@@ -54,6 +57,32 @@ var Characters = [
             }
             $('body').append($tableBody);
 
+ */
 
-            
-    });
+            var $rows = [];
+            function makeRows() {
+                Characters.forEach(function(chara) { 
+                    var $row = $('<tr></tr>'); 
+                    $row.append( $('<td></td>').text(chara.FullName) );
+                    $row.append( $('<td></td>').text(chara.Description) );
+                    $row.append( $('<td></td>').text(chara.Age) );
+                    $row.append( $('<td></td>').text(chara.DOB) );
+                    $rows.push({ 
+                    chara: chara, 
+                    $element: $row
+                    });
+                });
+                }
+
+                function appendRows() {
+                    var $tbody = $('<tbody></tbody>'); // Create <tbody> element
+                    $rows.forEach(function($row) { // Each obj in rows array
+                    $tbody.append($row.$element); // Add HTML for the row
+                    });
+                    $('body').append($tbody); // Add rows to the table
+                    }
+
+                makeRows();
+                appendRows();
+
+        });
