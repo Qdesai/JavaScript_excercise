@@ -9,7 +9,7 @@ var Characters = [
         Age: 41,
         DOB: new Date(1981, 06, 13)
         },
-        
+
         {
             FullName: "Robert Downey Jr",
             Description: "Robert Downey Jr who is playing Tony Stark (Iron Man) in the Marvel movies. his acting is very impressing and I cound'nt think of someone who could do this role better than him",
@@ -38,3 +38,30 @@ var Characters = [
             DOB: new Date(1996, 06, 01)
         }
     ]
+
+    $(function() {
+
+   /*  var Results = [];
+
+        Characters.forEach(function(chara){
+            Results.push(chara);
+        }); */
+        
+       
+        var $tableBody = $('<tbody></tbody>');
+
+        
+
+        for (var i = 0; i < Characters.length; i++) {
+            
+            //console.log(Characters[i].FullName);
+            var num = Characters[i];
+            var $row = $('<tr></tr>'); // Create row for them
+            $row.append($('<td></td>').text(num.FullName)); // Add name
+            $row.append($('<td></td>').text(num.Description)); // Add rate
+            $tableBody.append( $row );
+        }
+        
+ 
+
+    });
