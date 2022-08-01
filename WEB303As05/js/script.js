@@ -46,10 +46,11 @@ var Characters = [
 
             var $tbody = $('<tbody></tbody>');
             var $row = $('<tr></tr>');
-                $row.append( $('<th></th>').text('FullName'));
-                $row.append( $('<th></th>').text('Description'));
-                $row.append( $('<th></th>').text('Age'));
-                $row.append( $('<th></th>').text('DOB'));
+            var a = $('<a></a>');
+                $row.append( $('<th></th>').append('<a>FullName</a>'));
+                $row.append( $('<th></th>').append('<a>Description</a>'));
+                $row.append( $('<th></th>').append('<a>Age</a>'));
+                $row.append( $('<th></th>').append('<a>Date Of Birth</a>'));
                 var $temp = $tbody.append($row);
                 $('body').append($temp);
             
@@ -71,21 +72,18 @@ var Characters = [
 
 
                 function appendRows() {
-                    var $tbody = $('<tbody></tbody>'); // Create <tbody> element
-                    $rows.forEach(function($row) { // Each obj in rows array
-                    $tbody.append($row.$element); // Add HTML for the row
+                    var $tbody = $('<tbody></tbody>'); 
+                    $rows.forEach(function($row) { 
+                    $tbody.append($row.$element); 
                     });
-                    $('body').append($tbody); // Add rows to the table
+                    $('body').append($tbody); 
                     }
                     
                    
                 
                 makeRows();
-                
                 appendRows();
                 
-                
-
                 
                 $("#Search").on("keyup", function(){
                     let $str = $("#Search").val();
