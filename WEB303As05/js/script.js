@@ -79,6 +79,17 @@ var Characters = [
                     var column;
                     });
  */
+                   /*  function compare(a,b){
+                        return a.FullName - b.FullName;
+
+                    }
+
+                    $('th').on('click', function() { 
+                        Characters.sort(compare);
+                        console.log('this event wasas lcidcla');
+                        }); */
+
+
             //populating the table with the array 
             
             var $rows = [];
