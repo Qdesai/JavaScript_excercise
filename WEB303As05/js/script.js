@@ -44,33 +44,19 @@ var Characters = [
 
         $(function() {
 
-            /* var $tableBody = $('<tbody></tbody>');
-            
-            for (var i = 0; i < Characters.length; i++){
-
-                var $row = $('<tr></tr>');
-                $row.append($('<td></td>').text(Characters[i].FullName));
-                $row.append($('<td></td>').text(Characters[i].Description));
-                $row.append($('<td></td>').text(Characters[i].Age));
-                $row.append($('<td></td>').text(Characters[i].DOB));
-                $tableBody.append($row);
-            }
-            $('body').append($tableBody);
-
- */
-            
-                var $row = $('<tr></tr>');
+            var $tbody = $('<tbody></tbody>');
+            var $row = $('<tr></tr>');
                 $row.append( $('<th></th>').text('FullName'));
                 $row.append( $('<th></th>').text('Description'));
                 $row.append( $('<th></th>').text('Age'));
                 $row.append( $('<th></th>').text('DOB'));
-                var $temp = $('tbody').append($row);
+                var $temp = $tbody.append($row);
                 $('body').append($temp);
             
-            
+
             var $rows = [];
             function makeRows() {
-                Characters.forEach(function(chara) { 
+                Characters.forEach(function(chara) {
                     var $row = $('<tr></tr>'); 
                     $row.append( $('<td></td>').text(chara.FullName) );
                     $row.append( $('<td></td>').text(chara.Description) );
@@ -81,7 +67,7 @@ var Characters = [
                     $element: $row
                     });
                 });
-                }
+            }
 
 
                 function appendRows() {
@@ -101,9 +87,6 @@ var Characters = [
                 
 
                 
-                
-                
-
                 $("#Search").on("keyup", function(){
                     let $str = $("#Search").val();
                     console.log($str);
