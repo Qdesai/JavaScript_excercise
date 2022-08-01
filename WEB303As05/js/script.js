@@ -43,7 +43,7 @@ var Characters = [
 
 
         $(function() {
-
+            // table heading
             var $tbody = $('<tbody></tbody>');
             var $row = $('<tr></tr>');
             var a = $('<a></a>');
@@ -53,8 +53,34 @@ var Characters = [
                 $row.append( $('<th></th>').append('<a>Date Of Birth</a>'));
                 var $temp = $tbody.append($row);
                 $('body').append($temp);
-            
+             
 
+                /* var compare = { // Declare object
+                    name: function(a, b) { 
+                    a = a.replace(/^the /i, ''); 
+                    b = b.replace(/^the /i, ''); 
+                    if (a < b) { 
+                    return -1; 
+                    } else { 
+                    return a > b ? 1 : 0;
+                    }
+                    } 
+                    }
+
+                $('.sortable').each(function() {
+                    var $table = $(this); // This table
+                    var $tbody = $table.find('tbody'); // Table body
+                    var $controls = $table.find('th'); // Table headers
+                    var rows = $tbody.find('tr').toArray(); // Array of rows
+                });
+                    $controls.on('click', function() { // Event handler
+                    var $header = $(this); // Get header
+                    var order = $header.data('sort'); // Get data type
+                    var column;
+                    });
+ */
+            //populating the table with the array 
+            
             var $rows = [];
             function makeRows() {
                 Characters.forEach(function(chara) {
@@ -71,16 +97,14 @@ var Characters = [
             }
 
 
-                function appendRows() {
-                    var $tbody = $('<tbody></tbody>'); 
-                    $rows.forEach(function($row) { 
+            function appendRows() {
+                var $tbody = $('<tbody></tbody>'); 
+                $rows.forEach(function($row) { 
                     $tbody.append($row.$element); 
-                    });
-                    $('body').append($tbody); 
-                    }
+                });
+                $('body').append($tbody); 
+            }
                     
-                   
-                
                 makeRows();
                 appendRows();
                 
@@ -96,7 +120,5 @@ var Characters = [
                             $($row.$element).css("background-color","white");
                         }
                     })
-                    
-                    
                 });
         });
