@@ -58,7 +58,7 @@ var Characters = [
             $('body').append($tableBody);
 
  */
-            function addHeading(){
+            
                 var $row = $('<tr></tr>');
                 $row.append( $('<th></th>').text('FullName'));
                 $row.append( $('<th></th>').text('Description'));
@@ -66,8 +66,8 @@ var Characters = [
                 $row.append( $('<th></th>').text('DOB'));
                 var $temp = $('tbody').append($row);
                 $('body').append($temp);
-            }
-
+            
+            
             var $rows = [];
             function makeRows() {
                 Characters.forEach(function(chara) { 
@@ -93,10 +93,11 @@ var Characters = [
                     }
                     
                    
-                addHeading();
+                
                 makeRows();
+                
                 appendRows();
-              
+                
                 
 
                 
