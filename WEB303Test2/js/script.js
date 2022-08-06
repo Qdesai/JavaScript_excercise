@@ -14,9 +14,20 @@ chk.addEventListener("click", function(){
     if(uname.value.length >= 5 && pwd.value.length >= 12  && pwd.value === cPwd.value && chk.checked == true && dob.value){
         console.log('triggred');
         submit.disabled = false;
+
+        while (msg.firstChild) {
+            msg.removeChild(msg.firstChild);
+        }
     }
     else{
         let messages = [];
+        var msg = document.getElementById('message');
+        while (msg.firstChild) {
+            msg.removeChild(msg.firstChild);
+        }
+
+
+
         if(uname.value.length < 5 || !uname.value){
             messages.push("The UserName should contain atleast 5 charecters.");
         }
@@ -32,7 +43,6 @@ chk.addEventListener("click", function(){
         if(!dob.value){
             messages.push("Date of birth is not selected");
         }
-        var msg = document.getElementById('message');
         
         for (i = 0; i< messages.length; i++){
             var p = document.createElement('p');
