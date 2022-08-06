@@ -10,52 +10,55 @@ var dob = document.getElementById('dob');
 var msg = document.getElementById('message');
 let messages = [];
 
-/* chk.addEventListener("click", function(){
-    var t = pwd.value.length;
-    if(uname.value.length >= 5 && pwd.value.length >= 12  && pwd.value === cPwd.value && chk.checked == true && dob.value){
-        console.log('triggred');
-        submit.disabled = false;
 
-                                    while (msg.firstChild) {
-                                        msg.removeChild(msg.firstChild); // for clearing the messages from the page
-                                    }
-    }
-    else{
-        let messages = [];
+$(function() {
+    var $data = [];
+
+    $('form').submit(function(e){
+
+        
+        $data.push({
+            FullName: uname.value,
+            PwdLen: pwd.value.length,
+            bdate: dob.value
+        });
+        console.log($data);
+        
+for (var i = 0; i<$data.length; i++){
+        var $row = $('<tr></tr>');
+        var $arrId = $data[i];
+        $row.append( $('<td></td>').text($arrId.FullName) );
+        $row.append( $('<td></td>').text($arrId.PwdLen) );
+        $row.append( $('<td></td>').text($arrId.bdate) );
+
+        $('tbody').append($row);
+}
+
+        e.preventDefault();
+    })
+})
+/* var data = [];
+
+    form.addEventListener('submit', function(e){
     
         
-                                    while (msg.firstChild) {
-                                        msg.removeChild(msg.firstChild); // for clearing the messages from the page
-                                    }
+        data.push({
+            FullName: uname.value,
+            PwdLen: pwd.value.length,
+            date: dob.value
+        })
 
-        if(uname.value.length < 5 || !uname.value){
-            messages.push("The UserName should contain atleast 5 charecters.");
-        }
-        if(pwd.value.length < 12){
-            messages.push("The Password must contain atleast 12 charecters.");
-        }
-        if(pwd.value != cPwd.value){
-            messages.push("The password value does not match");
-        }
-        if(chk.checked == false){
-            messages.push("The terms and condition is not accepted");
-        }
-        if(!dob.value){
-            messages.push("Date of birth is not selected");
-        }
-        
-        for (i = 0; i< messages.length; i++){
-            var p = document.createElement('p');
-            p.append(messages[i]);
-            msg.append(p);
-        }
-    }
-}) */
+        var tr = document.createElement('tr');
+        var tbody = document.getElementsByName('tbody');
 
-form.addEventListener('submit', function(e){
+        tbody.
+
+    
+
+    console.log(data);
     e.preventDefault();
-})
-
+    })
+ */
                 uname.addEventListener('blur', function () {    
                     if(uname.value.length < 5 || !uname.value){        
                         clrMsg();
