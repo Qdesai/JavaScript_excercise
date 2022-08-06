@@ -9,28 +9,35 @@ var dob = document.getElementById('dob');
 
 let messages = [];
 
-cPwd.addEventListener("keyup", function(){
+chk.addEventListener("click", function(){
     var t = pwd.value.length;
     if(uname.value.length >= 5 && pwd.value.length >= 12  && pwd.value === cPwd.value && chk.checked == true && dob.value){
-        
+        console.log('triggred');
         submit.disabled = false;
     }
     else{
+        let messages = [];
         if(uname.value.length < 5 || !uname.value){
             messages.push("The UserName should contain atleast 5 charecters.");
         }
         if(pwd.value.length < 12){
             messages.push("The Password must contain atleast 12 charecters.");
-            var 
         }
         if(pwd.value != cPwd.value){
-            console.log("the password value does not match");
+            messages.push("The password value does not match");
         }
         if(chk.checked == false){
-            console.log('the terms and condition is not accepted');
+            messages.push("The terms and condition is not accepted");
         }
         if(!dob.value){
-            console.log('date of birth is not selected');
+            messages.push("Date of birth is not selected");
+        }
+        var msg = document.getElementById('message');
+        
+        for (i = 0; i< messages.length; i++){
+            var p = document.createElement('p');
+            p.append(messages[i]);
+            msg.append(p);
         }
     }
 })
