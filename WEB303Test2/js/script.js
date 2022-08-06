@@ -23,8 +23,16 @@ $(function() {
             bdate: dob.value
         });
         console.log($data);
+
+        var $rows = document.querySelectorAll('tbody > tr');
+
+        $rows.forEach(r => {
+          r.remove();
+        });
+            
         
 for (var i = 0; i<$data.length; i++){
+        
         var $row = $('<tr></tr>');
         var $arrId = $data[i];
         $row.append( $('<td></td>').text($arrId.FullName) );
@@ -32,6 +40,11 @@ for (var i = 0; i<$data.length; i++){
         $row.append( $('<td></td>').text($arrId.bdate) );
 
         $('tbody').append($row);
+
+       /*  while($('tbody').firstChild) {
+            $('tbody').removeChild($('tbody').firstChild);
+        } */
+
 }
 
         e.preventDefault();
