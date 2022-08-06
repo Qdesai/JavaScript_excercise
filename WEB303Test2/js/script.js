@@ -1,6 +1,6 @@
 var form = document.getElementById('register');
 var submit = document.getElementById('submit');
-submit.disabled = true;
+//submit.disabled = true;
 var uname = document.getElementById('username');
 var pwd = document.getElementById('p1');
 var cPwd = document.getElementById('p2');
@@ -51,9 +51,12 @@ let messages = [];
         }
     }
 }) */
-  
-                uname.addEventListener('blur', function () {
-                    
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+})
+
+                uname.addEventListener('blur', function () {    
                     if(uname.value.length < 5 || !uname.value){        
                         clrMsg();
                         messages.push("The UserName should contain atleast 5 charecters.");
@@ -97,24 +100,17 @@ let messages = [];
                     }
                 })
 
-                function errMsg(){
-                    
+                function errMsg(){    
                     for (i = 0; i < messages.length; i++){
                         var p = document.createElement('p');
                         p.append(messages[i]);
                         msg.append(p);
-                        
                     }
                     messages.pop();
                 }
-
 
                 function clrMsg(){
                     while(msg.firstChild) {
                         msg.removeChild(msg.firstChild);
                     }
                 }
-
-
-$(function() {
-});
