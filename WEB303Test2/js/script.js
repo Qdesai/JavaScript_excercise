@@ -1,6 +1,6 @@
 var form = document.getElementById('register');
 var submit = document.getElementById('submit');
-//submit.disabled = true;
+submit.disabled = true;
 var uname = document.getElementById('username');
 var pwd = document.getElementById('p1');
 var cPwd = document.getElementById('p2');
@@ -12,6 +12,7 @@ let messages = [];
 
 
 $(function() {
+    
     var $data = [];
 
     $('form').submit(function(e){
@@ -40,38 +41,19 @@ for (var i = 0; i<$data.length; i++){
         $row.append( $('<td></td>').text($arrId.bdate) );
 
         $('tbody').append($row);
-
-       /*  while($('tbody').firstChild) {
-            $('tbody').removeChild($('tbody').firstChild);
-        } */
-
 }
 
         e.preventDefault();
     })
 })
-/* var data = [];
 
-    form.addEventListener('submit', function(e){
-    
-        
-        data.push({
-            FullName: uname.value,
-            PwdLen: pwd.value.length,
-            date: dob.value
-        })
+form.addEventListener('change', function() { 
+    if(uname.value.length >= 5 && pwd.value.length >= 12  && pwd.value === cPwd.value && chk.checked == true && dob.value){
+        submit.disabled = false;
+    }
+    });
 
-        var tr = document.createElement('tr');
-        var tbody = document.getElementsByName('tbody');
 
-        tbody.
-
-    
-
-    console.log(data);
-    e.preventDefault();
-    })
- */
                 uname.addEventListener('blur', function () {    
                     if(uname.value.length < 5 || !uname.value){        
                         clrMsg();
