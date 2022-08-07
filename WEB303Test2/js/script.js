@@ -28,7 +28,14 @@ $(function() {
                         $rows.forEach(r => {
                         r.remove();
                         });     
-                        
+
+                        addRows();
+
+                        e.preventDefault();
+                    });
+
+                    function addRows(){
+                       
                     for(var i = 0; i<$data.length; i++){
                         
                         var $row = $('<tr></tr>');
@@ -39,16 +46,34 @@ $(function() {
 
                         $('tbody').append($row);
                     }
-
-                        e.preventDefault();
-                    });
+                    }
 
                     $('#sortUname').click(function(){
 
                         for(var i = 0; i<$data.length; i++){
-                        var $aId = $data[i];
+                            var $aId = $data[i];
+
                             if($aId.FullName.length < 12){
                                 console.log('hitttt');
+
+                                $datas = [];
+
+                                for(var i = 0; i<$data.length; i++){
+                        
+                                    var $row = $('<tr></tr>');
+                                    var $arrId = $data[i];
+                                    $row.append( $('<td></td>').text($arrId.FullName) );
+                                    $row.append( $('<td></td>').text($arrId.PwdLen) );
+                                    $row.append( $('<td></td>').text($arrId.bdate) );
+                                }
+
+                                $data.forEach(function(d) {
+                                    $datas.push({
+                                        d: d,
+                                        $element: $row
+                                    });
+                                })
+                                
                             }
                         }
                     });
