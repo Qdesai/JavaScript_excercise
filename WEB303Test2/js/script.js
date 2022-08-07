@@ -68,43 +68,54 @@ $(function() {
                                     }
                                 }
 
-                                /* 
+                    });
+
+                    $('#longUname').click(function(){
+                                var $rows = document.querySelectorAll('tbody > tr');
+                                    $rows.forEach(r => {
+                                    r.remove();
+                                    });
+
+
                                 for(var i = 0; i<$data.length; i++){
-                                $filetedData = [];
-                                $datas = [];
-                                
-                                $filetedData.forEach(function(d) {
-                                    for(var i = 0; i<$data.length; i++){
-                        
+
+                                    var $tId = $data[i];
+                                    if($tId.FullName.length >= 12){ 
                                         var $row = $('<tr></tr>');
-                                        var $arrId = $data[i];
-                                        $row.append( $('<td></td>').text($arrId.FullName) );
-                                        $row.append( $('<td></td>').text($arrId.PwdLen) );
-                                        $row.append( $('<td></td>').text($arrId.bdate) );
-                                        console.log($row);
-                                        $datas.push({
-                                            d: d,
-                                            $element: $row
-                                        });
+                                        $row.append( $('<td></td>').text($tId.FullName) );
+                                        $row.append( $('<td></td>').text($tId.PwdLen) );
+                                        $row.append( $('<td></td>').text($tId.bdate) );
+                                        $('tbody').append($row);
                                     }
-                                    $datas.forEach(function($row){
-                                        $('tbody').append($row.$element);
-                                    })
-                                     
-                                    if($row.FullName.length < 12){
-                                        $row.$element.show();
-                                    }
-                                    else{
-                                        $row.$element.hide();
-                                    }
-                                }) 
-                                
-                            }*/
+                                }
+
                     });
 
                     $('#reset').click(function(){
+                        var $rows = document.querySelectorAll('tbody > tr');
+                        $rows.forEach(r => {
+                        r.remove();
+                        });
 
+                        for(var i = 0; i<$data.length; i++){
+
+                                var $tId = $data[i];
+                            
+                                var $row = $('<tr></tr>');
+                                $row.append( $('<td></td>').text($tId.FullName) );
+                                $row.append( $('<td></td>').text($tId.PwdLen) );
+                                $row.append( $('<td></td>').text($tId.bdate) );
+                                $('tbody').append($row);
+                        }
                     });
+
+                    function callFilter(){
+                        var $row = $('<tr></tr>');
+                        $row.append( $('<td></td>').text($tId.FullName) );
+                        $row.append( $('<td></td>').text($tId.PwdLen) );
+                        $row.append( $('<td></td>').text($tId.bdate) );
+                        $('tbody').append($row);
+                    }
 })
 
 
