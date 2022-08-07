@@ -49,9 +49,27 @@ $(function() {
                     }
 
                     $('#sortUname').click(function(){
+                        var $rows = document.querySelectorAll('tbody > tr');
+                                    $rows.forEach(r => {
+                                    r.remove();
+                                    });
 
-                        for(var i = 0; i<$data.length; i++){
 
+                                for(var i = 0; i<$data.length; i++){
+
+                                    var $tId = $data[i];
+                                    if($tId.FullName.length < 12){
+        
+                                        var $row = $('<tr></tr>');
+                                        $row.append( $('<td></td>').text($tId.FullName) );
+                                        $row.append( $('<td></td>').text($tId.PwdLen) );
+                                        $row.append( $('<td></td>').text($tId.bdate) );
+                                        $('tbody').append($row);
+                                    }
+                                }
+
+                                /* 
+                                for(var i = 0; i<$data.length; i++){
                                 $filetedData = [];
                                 $datas = [];
                                 
@@ -72,16 +90,16 @@ $(function() {
                                     $datas.forEach(function($row){
                                         $('tbody').append($row.$element);
                                     })
-  /*                                    
+                                     
                                     if($row.FullName.length < 12){
                                         $row.$element.show();
                                     }
                                     else{
                                         $row.$element.hide();
-                                    } */
-                                })
-
-                        }
+                                    }
+                                }) 
+                                
+                            }*/
                     });
 
                     $('#reset').click(function(){
@@ -90,15 +108,11 @@ $(function() {
 })
 
 
-
-
-
-
-
-
     form.addEventListener('change', function() { 
             if(uname.value.length >= 5 && pwd.value.length >= 12  && pwd.value === cPwd.value && chk.checked == true && dob.value){
                 submit.disabled = false;
+            }else{
+                submit.disabled = true;
             }
     });
 
