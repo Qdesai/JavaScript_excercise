@@ -10,7 +10,6 @@ var dob = document.getElementById('dob');
 var msg = document.getElementById('message');
 let messages = [];
 
-
 $(function() {
     
                     var $data = [];
