@@ -13,44 +13,58 @@ let messages = [];
 
 $(function() {
     
-    var $data = [];
+                    var $data = [];
 
-    $('form').submit(function(e){
+                    $('form').submit(function(e){
 
-        
-        $data.push({
-            FullName: uname.value,
-            PwdLen: pwd.value.length,
-            bdate: dob.value
-        });
-        console.log($data);
+                        $data.push({
+                            FullName: uname.value,
+                            PwdLen: pwd.value.length,
+                            bdate: dob.value
+                        });
 
-        var $rows = document.querySelectorAll('tbody > tr');
+                        var $rows = document.querySelectorAll('tbody > tr');
 
-        $rows.forEach(r => {
-          r.remove();
-        });
-            
-        
-for (var i = 0; i<$data.length; i++){
-        
-        var $row = $('<tr></tr>');
-        var $arrId = $data[i];
-        $row.append( $('<td></td>').text($arrId.FullName) );
-        $row.append( $('<td></td>').text($arrId.PwdLen) );
-        $row.append( $('<td></td>').text($arrId.bdate) );
+                        $rows.forEach(r => {
+                        r.remove();
+                        });     
+                        
+                    for(var i = 0; i<$data.length; i++){
+                        
+                        var $row = $('<tr></tr>');
+                        var $arrId = $data[i];
+                        $row.append( $('<td></td>').text($arrId.FullName) );
+                        $row.append( $('<td></td>').text($arrId.PwdLen) );
+                        $row.append( $('<td></td>').text($arrId.bdate) );
 
-        $('tbody').append($row);
-}
+                        $('tbody').append($row);
+                    }
 
-        e.preventDefault();
-    })
+                        e.preventDefault();
+                    });
+
+                    $('#sortUname').click(function(){
+
+                        for(var i = 0; i<$data.length; i++){
+                        var $aId = $data[i];
+                            if($aId.FullName.length < 12){
+                                console.log('hitttt');
+                            }
+                        }
+                    });
 })
 
-form.addEventListener('change', function() { 
-    if(uname.value.length >= 5 && pwd.value.length >= 12  && pwd.value === cPwd.value && chk.checked == true && dob.value){
-        submit.disabled = false;
-    }
+
+
+
+
+
+
+
+    form.addEventListener('change', function() { 
+            if(uname.value.length >= 5 && pwd.value.length >= 12  && pwd.value === cPwd.value && chk.checked == true && dob.value){
+                submit.disabled = false;
+            }
     });
 
 
