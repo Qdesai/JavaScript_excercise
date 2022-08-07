@@ -51,30 +51,38 @@ $(function() {
                     $('#sortUname').click(function(){
 
                         for(var i = 0; i<$data.length; i++){
-                            var $aId = $data[i];
 
-                            if($aId.FullName.length < 12){
-                                console.log('hitttt');
-
+                                $filetedData = [];
                                 $datas = [];
-
-                                for(var i = 0; i<$data.length; i++){
-                        
-                                    var $row = $('<tr></tr>');
-                                    var $arrId = $data[i];
-                                    $row.append( $('<td></td>').text($arrId.FullName) );
-                                    $row.append( $('<td></td>').text($arrId.PwdLen) );
-                                    $row.append( $('<td></td>').text($arrId.bdate) );
-                                }
-
-                                $data.forEach(function(d) {
-                                    $datas.push({
-                                        d: d,
-                                        $element: $row
-                                    });
-                                })
                                 
-                            }
+
+                                $filetedData.forEach(function(d) {
+                                    for(var i = 0; i<$data.length; i++){
+                        
+                                        var $row = $('<tr></tr>');
+                                        var $arrId = $data[i];
+                                        $row.append( $('<td></td>').text($arrId.FullName) );
+                                        $row.append( $('<td></td>').text($arrId.PwdLen) );
+                                        $row.append( $('<td></td>').text($arrId.bdate) );
+                                        $datas.push({
+                                            d: d,
+                                            $element: $row
+                                        });
+                                    }
+
+                                    $datas.forEach(function($row){
+                                        $tbody.append($row.$element);
+                                    })
+  /*                                   
+                                    
+                                    if($row.FullName.length < 12){
+                                        $row.$element.show();
+                                    }
+                                    else{
+                                        $row.$element.hide();
+                                    } */
+                                })
+
                         }
                     });
 })
