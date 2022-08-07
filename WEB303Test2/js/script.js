@@ -55,7 +55,6 @@ $(function() {
                                 $filetedData = [];
                                 $datas = [];
                                 
-
                                 $filetedData.forEach(function(d) {
                                     for(var i = 0; i<$data.length; i++){
                         
@@ -64,17 +63,16 @@ $(function() {
                                         $row.append( $('<td></td>').text($arrId.FullName) );
                                         $row.append( $('<td></td>').text($arrId.PwdLen) );
                                         $row.append( $('<td></td>').text($arrId.bdate) );
+                                        console.log($row);
                                         $datas.push({
                                             d: d,
                                             $element: $row
                                         });
                                     }
-
                                     $datas.forEach(function($row){
-                                        $tbody.append($row.$element);
+                                        $('tbody').append($row.$element);
                                     })
-  /*                                   
-                                    
+  /*                                    
                                     if($row.FullName.length < 12){
                                         $row.$element.show();
                                     }
@@ -84,6 +82,10 @@ $(function() {
                                 })
 
                         }
+                    });
+
+                    $('#reset').click(function(){
+
                     });
 })
 
